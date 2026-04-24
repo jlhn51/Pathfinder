@@ -1,6 +1,8 @@
 import { db } from "@/db";
 import { targetRoles } from "@/db/schema";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const roles = await db.select().from(targetRoles);
 
